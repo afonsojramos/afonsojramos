@@ -39,7 +39,7 @@ const data = {
   work: `${chalk.white('Junior Software Developer @')} ${chalk.hex('#f25621').bold('Hostelworld')}`,
   github: chalk.gray('https://github.com/') + chalk.green('afonsojramos'),
   linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('afonsojramos'),
-  web: chalk.white('https://') + chalk.cyan('afonsojramos.me'),
+  web: chalk.white('https://') + chalk.cyan('afonsojramos.me') + chalk.hidden('/?ref=npx'),
   npx: `${chalk.red('npx')} ${chalk.white('afonsojramos')}`,
 
   labelWork: chalk.white.bold('       Work:'),

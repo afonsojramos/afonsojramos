@@ -1,6 +1,6 @@
 {
   "name": "afonsojramos",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A personal command-line business card.",
   "scripts": {
     "build": "npm run clean && npm run compile",
