@@ -1,15 +1,12 @@
-name: Bump & Publish
+name: Publish on Bump
 
 on:
   push:
     branches:
       - main
-  release:
-    types: [created]
 
 jobs:
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
