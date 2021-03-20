@@ -8,6 +8,14 @@
     /* Advanced Options */
     "skipLibCheck": false /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "outDir": "./dist"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["./__tests__/**/*", "node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   }
 }
