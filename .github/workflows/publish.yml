@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Node.js CI"]
+    types:
+      - completed
 
 jobs:
-  publish-npm:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +19,6 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm test
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
