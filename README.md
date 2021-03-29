@@ -2,11 +2,13 @@
 
 ### 📍 Currently working as an Junior Software Enginner at <a href="https://www.hostelworld.com/pt/" style="color: #f25621">Hostelworld</a>
 
-> Open-Source & competitive programming enthusiast, music lover & concerts front-liner, beer afficionado, peripatetic by nature.
+_Open-Source & competitive programming enthusiast, music lover & concerts front-liner, beer afficionado, peripatetic by nature._
+
+_I ❤️ to learn on a daily basis, to face new challenges and to contribute to open-source. Github is a playground for my experiments._
 
 ---
 
-A little more about me... with npm installed, just type
+A little more about me... with npm installed, just type the following on a console:
 
 ```
 npx afonsojramos
