@@ -12,5 +12,7 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          output_action: gist
+          committer_gist: bed94a881010802c51a0310b7f35049a
           config_timezone: Europe/Lisbon
+          token: ${{ secrets.METRICS_TOKEN }}
