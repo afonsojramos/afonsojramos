@@ -14,5 +14,10 @@ jobs:
         with:
           output_action: gist
           committer_gist: bed94a881010802c51a0310b7f35049a
+          plugin_traffic: yes
+          plugin_notable_indepth: yes
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: X
           config_timezone: Europe/Lisbon
           token: ${{ secrets.METRICS_TOKEN }}
