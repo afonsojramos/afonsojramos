@@ -19,5 +19,9 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_display: detailed
           plugin_achievements_threshold: X
+          plugin_pagespeed: yes
+          plugin_pagespeed_detailed: yes
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+          plugin_pagespeed_url: https://afonsojramos.me
           config_timezone: Europe/Lisbon
           token: ${{ secrets.METRICS_TOKEN }}
