@@ -8,7 +8,7 @@ _I ❤️ to learn on a daily basis, to face new challenges and to contribute to
 
 ---
 
-![](https://github-readme-stats.vercel.app/api?username=afonsojramos&show_icons=true&include_all_commits=true&theme=dark)
+![](https://github-readme-stats.vercel.app/api?username=afonsojramos&include_all_commits=true&count_private=true&show_icons=true&theme=city_lights)
 
 A little more about me... with npm installed, just type the following on a console:
 
