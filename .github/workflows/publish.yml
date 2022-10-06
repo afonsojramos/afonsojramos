@@ -2,7 +2,7 @@ name: Publish on Bump
 
 on:
   workflow_run:
-    workflows: ["Node.js CI"]
+    workflows: ['Node.js CI']
     types:
       - completed
 
@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm install
+      - run: pnpm install
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
