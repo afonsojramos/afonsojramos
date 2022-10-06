@@ -2,9 +2,9 @@
 
 ### 📍 Currently working as a Software Engineer at [yld](https://yld.io/)
 
-_Open-Source & competitive programming enthusiast, music lover & concerts front-liner, beer afficionado, peripatetic by nature._
+_Open-Source & competitive programming enthusiast, music lover & concert front-liner, beer afficionado, and peripatetic by nature._
 
-_I ❤️ to learn on a daily basis, to face new challenges and to contribute to open-source. Github is a playground for my experiments._
+_I ❤️ learning on a daily basis, facing new challenges, and contributing to open-source. Github is a playground for my experiments._
 
 ---
 

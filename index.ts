@@ -36,9 +36,9 @@ const questions = [
 const data = {
   name: chalk.bold.green('        Afonso Jorge Ramos'),
   handle: chalk.white('@afonsojramos'),
-  work: `${chalk.white('Junior Software Developer @')} ${chalk.hex('#005DAD').bold('eDreams')}`,
-  github: chalk.gray('https://github.com/') + chalk.green('afonsojramos'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('afonsojramos'),
+  work: `${chalk.white('Software Engineer @')} ${chalk.hex('#FFF').bold('yld')}`,
+  github: chalk.gray('https://github.com/') + chalk.hex('#0969da')('afonsojramos'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.hex('#0072b1')('afonsojramos'),
   web: chalk.white('https://') + chalk.cyan('afonsojramos.me') + chalk.hidden('/?ref=npx'),
   npx: `${chalk.red('npx')} ${chalk.white('afonsojramos')}`,
 
