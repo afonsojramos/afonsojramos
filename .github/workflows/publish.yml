@@ -18,6 +18,8 @@ jobs:
         with:
           version: 7
           run_install: true
+      - run: git config --global user.name "${{ github.actor }}"
+      - run: git config --global user.email "github-action-${{ github.actor }}@users.noreply.github.com"
       - run: pnpm version ${{ github.event.release.tag_name }}
       - run: pnpm publish
         env:
