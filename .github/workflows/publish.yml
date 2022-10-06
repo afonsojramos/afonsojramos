@@ -16,7 +16,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: pnpm install
+      - uses: pnpm/action-setup@v2.2.2
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: true
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
