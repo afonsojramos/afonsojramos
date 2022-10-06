@@ -1,15 +1,12 @@
 name: Publish on Bump
 
 on:
-  workflow_run:
-    workflows: ['Node.js CI']
-    types:
-      - completed
+  release:
+    types: [created]
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -21,6 +18,7 @@ jobs:
         with:
           version: 7
           run_install: true
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - run: pnpm version ${{ github.event.release.tag_name }}
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
