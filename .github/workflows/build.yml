@@ -18,6 +18,5 @@ jobs:
         name: Install pnpm
         with:
           version: 7
-          run_install: false
-      - run: pnpm ci
+          run_install: true
       - run: pnpm run build --if-present
