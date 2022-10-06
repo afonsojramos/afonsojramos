@@ -3,10 +3,9 @@
 import boxen from 'boxen';
 import chalk from 'chalk';
 import inquirer from 'inquirer';
-import clear from 'clear';
 import open from 'open';
 
-clear();
+process.stdout.write(process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H');
 
 const prompt = inquirer.createPromptModule();
 
