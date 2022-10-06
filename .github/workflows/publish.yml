@@ -1,4 +1,4 @@
-name: Publish on Bump
+name: Publish Package
 
 on:
   release:
