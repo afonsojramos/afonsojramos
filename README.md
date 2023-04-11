@@ -1,6 +1,6 @@
 ### Heyo, I'm Afonso, nice to meet you! 👋
 
-### 📍 Currently working as a Software Engineer at [yld](https://yld.io/) consulting for [NewDay](https://www.newday.co.uk/).
+### 📍 Currently working as a Software Engineer at [yld](https://yld.io/) consulting for the Financial Services Industry.
 
 _Open-Source & competitive programming enthusiast, music lover & concert front-liner, beer aficionado, and peripatetic by nature._
 
