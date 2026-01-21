@@ -21,6 +21,5 @@ npx afonsojramos # alternatively: bunx afonsojramos / pnpm dlx afonsojramos
 <p>
   <a href="https://afonsojramos.me"><img src="https://img.shields.io/badge/-afonsojramos.me-000?style=flat-square&logo=safari&logoColor=white" alt="Website" /></a>&nbsp;
   <a href="https://linkedin.com/in/afonsojramos"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
-  <a href="https://bsky.app/profile/afonsojramos.me"><img src="https://img.shields.io/badge/-Bluesky-0285FF?style=flat-square&logo=bluesky&logoColor=white" alt="Bluesky" /></a>&nbsp;
   <a href="https://cal.com/afonsojramos"><img src="https://img.shields.io/badge/-Book_a_chat-292929?style=flat-square&logo=calendly&logoColor=white" alt="Cal.com" /></a>
 </p>
