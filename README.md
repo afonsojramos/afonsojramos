@@ -1,19 +1,26 @@
-### Heyo, I'm Afonso, nice to meet you! 👋
+## Hey, I'm Afonso 👋
 
-### 📍 Currently working as a Software Engineer at [yld](https://yld.io/) consulting for the Financial Services Industry.
+**Principal Software Engineer & Tech Lead** at [YLD](https://yld.io/) currently consulting within the Education sector
 
-_Open-Source & competitive programming enthusiast, music lover & concert front-liner, beer aficionado, and peripatetic by nature._
+Product-minded engineer passionate about crafting exceptional products and experiences. Deeply committed to open source, not just as code, but as a philosophy of knowledge sharing, mentorship, and collective growth.
 
-_I ❤️ learning on a daily basis, facing new challenges, and contributing to open-source. Github is a playground for my experiments._
+### What I do
+
+Full-stack generalist comfortable across the entire stack—from mobile apps and SPAs to GraphQL APIs, microservices, and cloud infrastructure. Frontend at heart, with a deep understanding of how frontend frameworks tick. I've shipped products in fintech, education, travel, and developer tools.
 
 ---
 
-[![](https://github-readme-stats.vercel.app/api?username=afonsojramos&include_all_commits=true&count_private=true&show_icons=true&theme=city_lights)](https://github-readme-stats.vercel.app/api?username=afonsojramos&include_all_commits=true&count_private=true&show_icons=true&theme=city_lights)
-
-A little more about me... with npm installed, just type the following on a console:
-
-```
-npx afonsojramos@latest
+```bash
+npx afonsojramos # alternatively: bunx afonsojramos / pnpm dlx afonsojramos
 ```
 
-You can also check out my personal website 🧐 [afonsojramos.me](https://afonsojramos.me)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=afonsojramos&include_all_commits=true&count_private=true&show_icons=true&theme=city_lights&hide_border=true)](https://github.com/afonsojramos)
+
+### Connect
+
+<p>
+  <a href="https://afonsojramos.me"><img src="https://img.shields.io/badge/-afonsojramos.me-000?style=flat-square&logo=safari&logoColor=white" alt="Website" /></a>&nbsp;
+  <a href="https://linkedin.com/in/afonsojramos"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
+  <a href="https://bsky.app/profile/afonsojramos.me"><img src="https://img.shields.io/badge/-Bluesky-0285FF?style=flat-square&logo=bluesky&logoColor=white" alt="Bluesky" /></a>&nbsp;
+  <a href="https://cal.com/afonsojramos"><img src="https://img.shields.io/badge/-Book_a_chat-292929?style=flat-square&logo=calendly&logoColor=white" alt="Cal.com" /></a>
+</p>
