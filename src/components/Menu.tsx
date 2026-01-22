@@ -80,9 +80,7 @@ export function Menu({ show, onExit, onStartDance }: MenuProps) {
 
   return (
     <Box flexDirection="column" marginTop={1}>
-      <Text color={colors.text.secondary} dimColor>
-        What would you like to do?
-      </Text>
+      <Text color={colors.text.secondary}>What would you like to do?</Text>
       <Box marginTop={1} flexDirection="column">
         {menuActions.map((action, index) => {
           const isSelected = index === selectedIndex;
@@ -91,7 +89,7 @@ export function Menu({ show, onExit, onStartDance }: MenuProps) {
               <Text color={isSelected ? colors.primary : colors.text.primary}>
                 {isSelected ? ">" : " "} {action.label}
               </Text>
-              <Text color={colors.text.muted}> [{action.hotkey}]</Text>
+              <Text color={colors.accent}> [{action.hotkey}]</Text>
             </Box>
           );
         })}

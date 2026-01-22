@@ -22,7 +22,7 @@ export function HelpBar({ show }: HelpBarProps) {
     <Box marginTop={1} flexDirection="row" gap={2}>
       {hints.map((hint) => (
         <Box key={hint.key}>
-          <Text color={colors.primary}>{hint.key}</Text>
+          <Text color={colors.accent}>{hint.key}</Text>
           <Text color={colors.text.muted}> {hint.action}</Text>
         </Box>
       ))}

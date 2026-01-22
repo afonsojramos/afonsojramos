@@ -1,23 +1,24 @@
 export const colors = {
-  primary: "#00d9ff",
-  secondary: "#7c3aed",
-  accent: "#22c55e",
+  primary: "#ffffff",
+  secondary: "#a8a29e", // stone-400
+  accent: "#fef08a", // soft yellow for hotkeys
 
   text: {
     primary: "#ffffff",
-    secondary: "#a1a1aa",
-    muted: "#71717a",
+    secondary: "#d6d3d1", // stone-300 (lighter)
+    muted: "#a8a29e", // stone-400
   },
 
   brand: {
-    github: "#0969da",
-    linkedin: "#0072b1",
-    email: "#22c55e",
-    calendar: "#ff6b6b",
+    github: "#d6d3d1",
+    linkedin: "#d6d3d1",
+    email: "#d6d3d1",
+    calendar: "#d6d3d1",
   },
 
-  border: "#3f3f46",
-  highlight: "#00d9ff",
+  border: "#44403c", // stone-700
+  highlight: "#ffffff",
+  dance: "#ff6b6b", // fun coral for Rick Astley
 } as const;
 
-export const gradientColors = ["#00d9ff", "#7c3aed", "#ec4899"] as const;
+export const gradientColors = ["#ffffff", "#fef9c3", "#fef08a"] as const;

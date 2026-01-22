@@ -26,7 +26,7 @@ function LinkItem({ link, visible }: LinkItemProps) {
         </Text>
       </Box>
       <Text color={link.color}>{link.url.replace("https://", "")}</Text>
-      <Text color={colors.text.muted}> [{link.hotkey}]</Text>
+      <Text color={colors.accent}> [{link.hotkey}]</Text>
     </Box>
   );
 }

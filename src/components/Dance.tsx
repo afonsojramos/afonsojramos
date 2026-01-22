@@ -85,7 +85,7 @@ export function Dance({ onExit }: DanceProps) {
         </Text>
       </Box>
       <Box justifyContent="center" width={dimensions.width} height={frameHeight} overflow="hidden">
-        <Text color="#ff6b6b">{croppedFrames[frameIndex]}</Text>
+        <Text color={colors.dance}>{croppedFrames[frameIndex]}</Text>
       </Box>
       <Box justifyContent="center" width={dimensions.width}>
         <Text color={colors.text.muted} dimColor>
