@@ -1,27 +1,22 @@
 import { Box, Text, useInput } from "ink";
 import open from "open";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { links, menuActions, userInfo } from "../constants/userInfo.js";
 import { useTheme } from "../theme/index.js";
-import { Dance } from "./Dance.js";
 
 interface MenuProps {
   show: boolean;
   onExit: () => void;
+  onStartDance: () => void;
 }
 
-export function Menu({ show, onExit }: MenuProps) {
+export function Menu({ show, onExit, onStartDance }: MenuProps) {
   const { colors } = useTheme();
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isDancing, setIsDancing] = useState(false);
-
-  const stopDancing = useCallback(() => {
-    setIsDancing(false);
-  }, []);
 
   useInput(
     (input, key) => {
-      if (!show || isDancing) return;
+      if (!show) return;
 
       // Vim-style navigation (clamped)
       if (input === "j" || key.downArrow) {
@@ -40,7 +35,7 @@ export function Menu({ show, onExit }: MenuProps) {
           open(`mailto:${userInfo.email}`);
           onExit();
         } else if (action.value === "dance") {
-          setIsDancing(true);
+          onStartDance();
         } else if (action.value === "quit") {
           onExit();
         }
@@ -55,7 +50,7 @@ export function Menu({ show, onExit }: MenuProps) {
 
       // Dance hotkey
       if (input === "d") {
-        setIsDancing(true);
+        onStartDance();
         return;
       }
 
@@ -78,14 +73,10 @@ export function Menu({ show, onExit }: MenuProps) {
         onExit();
       }
     },
-    { isActive: show && !isDancing },
+    { isActive: show },
   );
 
   if (!show) return null;
-
-  if (isDancing) {
-    return <Dance onExit={stopDancing} />;
-  }
 
   return (
     <Box flexDirection="column" marginTop={1}>
