@@ -53,7 +53,7 @@ export const menuActions = [
     hotkey: "e",
   },
   {
-    label: "Dance!",
+    label: "Download more RAM",
     value: "dance",
     hotkey: "d",
   },
