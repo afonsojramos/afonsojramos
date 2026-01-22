@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 /**
  * Compresses ASCII art frames for the dance animation using zlib.
- * - Parses raw frames from frames-raw.txt (BASH script with 25-line header, 36 lines per frame)
+ * - Parses raw frames from frames-raw.txt (36 lines per frame)
  * - Compresses using gzip, stores as base64
  * - Frames are decompressed at runtime
  *
@@ -19,12 +19,9 @@ const assetsDir = join(import.meta.dir, "../src/assets");
 const rawPath = join(assetsDir, "frames-raw.txt");
 const outPath = join(assetsDir, "frames.ts");
 
-// Read raw file (BASH script with 25-line header)
+// Read raw file
 const raw = readFileSync(rawPath, "utf-8");
-const allLines = raw.split("\n");
-
-// Skip first 25 lines (code/comments), frames start at line 26
-const lines = allLines.slice(25);
+const lines = raw.split("\n");
 
 console.log(`Total lines: ${lines.length}`);
 
@@ -33,8 +30,8 @@ const allFrames: string[] = [];
 for (let i = 0; i < lines.length; i += LINES_PER_FRAME) {
   const frameLines = lines.slice(i, i + LINES_PER_FRAME);
   if (frameLines.length === LINES_PER_FRAME) {
-    // Trim trailing whitespace from each line
-    const frame = frameLines.map((line) => line.trimEnd()).join("\n");
+    // Keep lines at full 130-char width for consistent centering
+    const frame = frameLines.map((line) => line.padEnd(130)).join("\n");
     allFrames.push(frame);
   }
 }
