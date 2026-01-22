@@ -1,65 +1,82 @@
 #!/usr/bin/env bun
 /**
- * Compresses ASCII art frames for the dance animation.
- * - Parses raw frames from frames-raw.txt
- * - Samples every Nth frame to reduce size
- * - Trims trailing whitespace from each line
- * - Outputs a TypeScript file with compressed frames
+ * Compresses ASCII art frames for the dance animation using zlib.
+ * - Parses raw frames from frames-raw.txt (BASH script with 25-line header, 36 lines per frame)
+ * - Compresses using gzip, stores as base64
+ * - Frames are decompressed at runtime
+ *
+ * ASCII frames from: https://github.com/johnsoupir/ASCII_Rickroll
+ * Thanks to @johnsoupir for the amazing ASCII art!
  */
 
+import { gzipSync } from "bun";
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
 const LINES_PER_FRAME = 36;
-const SAMPLE_RATE = 12; // Take every 12th frame (~12 frames total)
 
 const assetsDir = join(import.meta.dir, "../src/assets");
 const rawPath = join(assetsDir, "frames-raw.txt");
 const outPath = join(assetsDir, "frames.ts");
 
-// Read and parse raw frames
+// Read raw file (BASH script with 25-line header)
 const raw = readFileSync(rawPath, "utf-8");
-const lines = raw
-  .replace('FRAMES = """', "")
-  .replace('"""', "")
-  .split("\n")
-  .filter((line) => line.length > 0);
+const allLines = raw.split("\n");
 
-// Split into frames
-const frames: string[][] = [];
+// Skip first 25 lines (code/comments), frames start at line 26
+const lines = allLines.slice(25);
+
+console.log(`Total lines: ${lines.length}`);
+
+// Split into frames (36 lines each)
+const allFrames: string[] = [];
 for (let i = 0; i < lines.length; i += LINES_PER_FRAME) {
-  const frame = lines.slice(i, i + LINES_PER_FRAME);
-  if (frame.length === LINES_PER_FRAME) {
-    frames.push(frame);
+  const frameLines = lines.slice(i, i + LINES_PER_FRAME);
+  if (frameLines.length === LINES_PER_FRAME) {
+    // Trim trailing whitespace from each line
+    const frame = frameLines.map((line) => line.trimEnd()).join("\n");
+    allFrames.push(frame);
   }
 }
 
-console.log(`Total frames parsed: ${frames.length}`);
+console.log(`Total frames parsed: ${allFrames.length}`);
 
-// Sample and compress frames
-const sampledFrames = frames.filter((_, i) => i % SAMPLE_RATE === 0);
+const selectedFrames = allFrames;
 
-const compressedFrames = sampledFrames.map((frame) =>
-  frame.map((line) => line.trimEnd()).join("\n"),
-);
+console.log(`Selected frames: ${selectedFrames.length}`);
 
-console.log(`Sampled frames: ${compressedFrames.length}`);
+// Compress all frames as a single JSON blob
+const framesJson = JSON.stringify(selectedFrames);
+const compressed = gzipSync(framesJson);
+const base64 = Buffer.from(compressed).toString("base64");
 
-// Generate TypeScript output
+console.log(`Frames JSON size: ${framesJson.length} bytes`);
+console.log(`Compressed size: ${compressed.length} bytes`);
+console.log(`Base64 size: ${base64.length} bytes`);
+console.log(`Compression ratio: ${((compressed.length / framesJson.length) * 100).toFixed(1)}%`);
+
+// Generate TypeScript output with decompression at runtime
 const output = `// Auto-generated - do not edit manually
 // Run: bun scripts/compress-frames.ts
 
-export const danceFrames = [
-${compressedFrames.map((frame) => `  \`${frame}\``).join(",\n")}
-];
+import { gunzipSync } from "zlib";
+
+const compressed = "${base64}";
+
+function decompress(): string[] {
+  const bytes = Uint8Array.from(atob(compressed), (c) => c.charCodeAt(0));
+  const decompressed = gunzipSync(bytes);
+  const text = new TextDecoder().decode(decompressed);
+  return JSON.parse(text);
+}
+
+export const danceFrames: string[] = decompress();
 `;
 
 writeFileSync(outPath, output);
 console.log(`Wrote compressed frames to ${outPath}`);
 
-// Stats
+// Final stats
 const rawSize = raw.length;
-const compressedSize = output.length;
-console.log(
-  `Compression: ${rawSize} -> ${compressedSize} bytes (${((compressedSize / rawSize) * 100).toFixed(1)}%)`,
-);
+const outputSize = output.length;
+console.log(`\nTotal: ${rawSize} -> ${outputSize} bytes (${((outputSize / rawSize) * 100).toFixed(1)}%)`);
