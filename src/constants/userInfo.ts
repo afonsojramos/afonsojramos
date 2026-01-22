@@ -53,6 +53,11 @@ export const menuActions = [
     hotkey: "e",
   },
   {
+    label: "Dance!",
+    value: "dance",
+    hotkey: "d",
+  },
+  {
     label: "Just quit",
     value: "quit",
     hotkey: "q",
