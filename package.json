@@ -2,9 +2,34 @@
   "name": "afonsojramos",
   "version": "2.0.0",
   "description": "A personal command-line business card with interactive TUI",
+  "keywords": [
+    "business",
+    "business card",
+    "card",
+    "cli",
+    "npx card",
+    "terminal",
+    "tui"
+  ],
+  "homepage": "https://afonsojramos.me",
+  "bugs": {
+    "url": "https://github.com/afonsojramos/afonsojramos/issues"
+  },
+  "license": "ISC",
+  "author": "Afonso Ramos <afonsojorgeramos@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afonsojramos/afonsojramos.git"
+  },
+  "bin": {
+    "afonsojramos": "dist/cli.js"
+  },
+  "type": "module",
+  "main": "dist/cli.js",
   "scripts": {
     "dev": "tsx watch src/cli.tsx",
-    "build": "tsc",
+    "generate:frames": "bun scripts/compress-frames.ts",
+    "build": "bun run generate:frames && tsc",
     "build:bun": "bun build src/cli.tsx --compile --outfile bin/afonsojramos",
     "build:bun:macos": "bun build src/cli.tsx --compile --target=bun-darwin-arm64 --outfile bin/afonsojramos-macos",
     "build:bun:linux": "bun build src/cli.tsx --compile --target=bun-linux-x64 --outfile bin/afonsojramos-linux",
@@ -27,29 +52,5 @@
     "react-devtools-core": "^7.0.1",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
-  },
-  "keywords": [
-    "business",
-    "card",
-    "npx card",
-    "business card",
-    "cli",
-    "terminal",
-    "tui"
-  ],
-  "author": "Afonso Ramos <afonsojorgeramos@gmail.com>",
-  "homepage": "https://afonsojramos.me",
-  "license": "ISC",
-  "main": "dist/cli.js",
-  "type": "module",
-  "bin": {
-    "afonsojramos": "dist/cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/afonsojramos/afonsojramos.git"
-  },
-  "bugs": {
-    "url": "https://github.com/afonsojramos/afonsojramos/issues"
   }
 }
