@@ -27,7 +27,7 @@
   "type": "module",
   "main": "dist/cli.js",
   "scripts": {
-    "dev": "tsx watch src/cli.tsx",
+    "dev": "bun --watch src/cli.tsx",
     "generate:frames": "bun scripts/compress-frames.ts",
     "build": "bun run generate:frames && tsc",
     "build:bun": "bun build src/cli.tsx --compile --outfile bin/afonsojramos",
@@ -51,7 +51,6 @@
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
     "react-devtools-core": "^7.0.1",
-    "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   }
 }
