@@ -4,9 +4,9 @@
 
 Product-minded engineer passionate about crafting exceptional products and experiences. Deeply committed to open source, not just as code, but as a philosophy of knowledge sharing, mentorship, and collective growth.
 
-### What I do
+### What I do 🙋
 
-Full-stack generalist comfortable across the entire stack—from mobile apps and SPAs to GraphQL APIs, microservices, and cloud infrastructure. Frontend at heart, with a deep understanding of how frontend frameworks tick. I've shipped products in fintech, education, travel, and developer tools.
+Full-stack generalist comfortable across the entire stack - from mobile apps and SPAs to GraphQL APIs, microservices, and cloud infrastructure. Frontend at heart, with a deep understanding of how frontend frameworks tick. I've shipped products in fintech, education, travel, and developer tools.
 
 ---
 
