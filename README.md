@@ -14,7 +14,7 @@ Full-stack generalist comfortable across the entire stack - from mobile apps and
 npx afonsojramos # alternatively: bunx afonsojramos / pnpm dlx afonsojramos
 ```
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=afonsojramos&include_all_commits=true&count_private=true&show_icons=true&theme=city_lights&hide_border=true)](https://github.com/afonsojramos)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=afonsojramos&hide_title=true&show_icons=true&include_all_commits=true&theme=swift)](https://github-stats-extended.vercel.app/api?username=afonsojramos&hide_title=true&show_icons=true&include_all_commits=true&theme=swift)
 
 ### Connect
 
